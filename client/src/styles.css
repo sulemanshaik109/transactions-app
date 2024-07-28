@@ -1,0 +1,114 @@
+.transactions-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.link-item {
+    text-decoration: none;
+}
+
+.button {
+    color: #ffffff;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    background-color: #0291ff;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 1;
+    outline: none;
+    cursor: pointer;
+}
+
+.table {
+    min-width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.thread {
+    position: sticky;
+    z-index: 100;
+}
+
+.trHead {
+    background-color: #dedede;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid #e7e7e7;
+    font-size: 14px;
+    text-align: center;
+}
+
+.td-description {
+    text-align: start;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.label {
+    width: 40%;
+    font-size: 16px;
+}
+
+.input {
+    width: 60%;
+    height: 30px;
+    border: 1px solid #b9b9b9;
+}
+
+.textarea {
+    width: 60%;
+    height: 60px;
+    border: 1px solid #b9b9b9;
+}
+
+.buttons-container {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.cancel-btn {
+    background-color: #ff0000;
+    padding: 10px;
+}
+
+.submit-btn {
+    background-color: #008000;
+    padding: 10px;
+}
+
+.add-transaction {
+    padding: 20px;
+}
+
+@media screen and (min-width: 567px) {
+    .add-transaction {
+        padding: 80px;
+    }
+}
