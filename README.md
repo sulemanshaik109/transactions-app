@@ -12,6 +12,8 @@ This is a Transactions Management application built with Node.js, Express, SQLit
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Technologies Used](#technologies-used)
+- [Deployment](#deployment)
+- [Testing](#testing)
 - [Resources](#resources)
 
 ## Demo
@@ -112,6 +114,98 @@ Make sure you have the following installed:
 - Backend: Node.js, Express, SQLite
 - Frontend: React, Axios, React Router
 - Styling: CSS
+
+## Deployment
+
+### Backend Deployment on Render
+
+1. Create a Render Account:
+    - Sign up for a free account at Render.
+
+2. Create a New Web Service:
+    - In the Render dashboard, click on "New" and then "Web Service".
+    - Connect your GitHub repository and select the transactions-app repository.
+
+3. Configure Build and Start Commands:
+    - Root Directory:
+
+        ```
+        server
+        ```
+
+    - Build Command:
+
+        ```
+        npm install
+        ```
+
+    - Start Command:
+
+        ```
+        node index.js
+        ```
+
+4. Set Environment Variables:
+
+    - In the Render service settings, add any necessary environment variables.
+
+5. Deploy:
+
+    - Trigger a new deploy by pushing changes to your GitHub repository or clicking the "Deploy" button in Render.
+
+6. Access the Application:
+
+    - Once the deployment is successful, you can access the backend at the URL provided by Render.
+
+### Frontend Deployment on Netlify
+
+1. Create a Netlify Account:
+
+    - Sign up for a free account at Netlify.
+
+2. Create a New Site:
+
+    - In the Netlify dashboard, click on "Add new site" and connect your GitHub repository.
+3. Configure Build and Publish Settings:
+
+    - Build Command:
+
+        ```
+        npm install
+        ```
+    - Publish Directory:
+        
+        ```
+        client
+        ```
+
+4. Deploy:
+
+    - Trigger a new deploy by pushing changes to your GitHub repository or clicking the "Deploy site" button in Netlify.
+5. Access the Application:
+
+    - Once the deployment is successful, you can access the frontend at the URL provided by Netlify.
+
+## Testing
+
+### Using Postman
+
+1. Add New Request:
+
+    - Create a new request in Postman or Insomnia.
+    - Set the request method to GET, POST, PUT, or DELETE depending on the endpoint you want to test.
+
+2. Set URL:
+
+    - Use the URL provided by Render for the backend. For example:
+
+        ```
+        https://suleman-transactions-app.onrender.com/api/transactions
+        ```
+
+3. Send Request:
+
+    - Send the request and check the response.
 
 ## Resources
 
