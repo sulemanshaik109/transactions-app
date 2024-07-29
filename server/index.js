@@ -6,7 +6,9 @@ const port = 3001;
 const transactionRoutes = require('./routes/transactionRoutes');
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://suleman-transactions-app.netlify.app'
+  }));
 app.use('/', transactionRoutes);
 
 app.use(express.static('build'));
