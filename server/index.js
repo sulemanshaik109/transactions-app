@@ -10,15 +10,19 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(bodyParser.json());
-app.use(cors({
-    origin: 'https://suleman-transactions-app.netlify.app'
-  }));
+
+const corsOptions = {
+    origin: ['http://localhost:3000', 'https://suleman-transactions-app.netlify.app'],
+    optionsSuccessStatus: 200
+  };
+
+app.use(cors(corsOptions));
+
 app.use('/', transactionRoutes);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);

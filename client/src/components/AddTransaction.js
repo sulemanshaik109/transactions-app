@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import "../styles.css"
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 class AddTransaction extends Component {
     state = {
         type: 'credit',
@@ -20,7 +22,7 @@ class AddTransaction extends Component {
         event.preventDefault();
         const { type, amount, description, date } = this.state;
         try {
-            await axios.post('http://localhost:3001/add-transaction', {
+            await axios.post(`${API_BASE_URL}/api/transactions`, {
                 type,
                 amount: parseFloat(amount),
                 description,

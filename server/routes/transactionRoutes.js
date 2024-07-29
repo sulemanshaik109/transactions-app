@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const { addTransaction, getTransactions } = require('../model/transactionModel');
 
-router.post('/add-transaction', (req, res) => {
+router.post('/api/transactions', (req, res) => {
     const { type, amount, description, date } = req.body;
     addTransaction(type, amount, description, date, (err, id) => {
         if (err) {
@@ -13,7 +13,7 @@ router.post('/add-transaction', (req, res) => {
     });
 });
 
-router.get('/transactions', (req, res) => {
+router.get('/api/transactions', (req, res) => {
     getTransactions((err, transactions) => {
         if (err) {
             return res.status(500).json({ error: err.message });

@@ -111,4 +111,7 @@ th, td {
     .add-transaction {
         padding: 80px;
     }
+    .transactions-list {
+        padding: 0px 40px;
+    }
 }

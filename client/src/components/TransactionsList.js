@@ -3,6 +3,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import "../styles.css"
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+console.log(`${API_BASE_URL}/api/transactions`)
+
 class TransactionsList extends Component {
     state = {
         transactions: [],
@@ -14,7 +17,7 @@ class TransactionsList extends Component {
 
     fetchTransactions = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/transactions');
+            const response = await axios.get(`${API_BASE_URL}/api/transactions`);
             this.setState({ transactions: response.data });
         } catch (error) {
             console.error('Error fetching transactions:', error);
